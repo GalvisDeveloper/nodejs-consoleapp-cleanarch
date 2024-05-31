@@ -1,3 +1,4 @@
+import { CreateTable } from "../domain/use-cases/create-table.use-case"
 import { MultiplicationProps } from "../interfaces/MultiplicationProps"
 
 export class ServerApp {
@@ -6,14 +7,9 @@ export class ServerApp {
     }
 
     static run(something: MultiplicationProps) {
-        console.log(something)
+        const table = new CreateTable().execute(something)
+        if (something.show) console.log(table)
+        console.log('Table generated')
     }
 
-    static stop() {
-        console.log('ServerApp stopped')
-    }
-
-    static restart() {
-        console.log('ServerApp restarted')
-    }
 }
