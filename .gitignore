@@ -1,8 +1,8 @@
 
 
-node_modules/
-outputs/
-dist/
+/node_modules
+/outputs
+/dist
 
 .env
 
