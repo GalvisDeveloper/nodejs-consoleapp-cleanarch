@@ -10,7 +10,8 @@ export class ServerApp {
     static run(something: MultiplicationProps) {
         const table = new CreateTable().execute(something)
         if (something.show) console.log(table)
-        new SaveFile().execute({ fileContent: table, destination: something.path, fileName: `${something.base}` })
+        console.log(something)
+        new SaveFile().execute({ fileContent: table, destination: something.path, fileName: something.name })
 
     }
 

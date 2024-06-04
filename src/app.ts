@@ -9,12 +9,13 @@ import { ServerApp } from "./presentation/server-app";
 
 async function main() {
     // Uso de yargs
-    const { b, l, s, } = yarg;
+    const { b, l, s, n, p } = yarg;
     let data: MultiplicationProps = {
         base: b,
         limit: l,
         show: s,
-        path: 'outputs/'
+        name: n,
+        path: p
     }
     // const { generateTableMultiplication } = await import('./app.logic');
     // generateTableMultiplication(data);

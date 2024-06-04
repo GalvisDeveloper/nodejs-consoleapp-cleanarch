@@ -21,8 +21,9 @@ export class SaveFile implements SaveFileUseCase {
     execute({ fileContent, destination = 'outputs', fileName = 'table.txt' }: Options): boolean {
 
         try {
-            fs.mkdirSync(destination, { recursive: true });
-            fs.writeFileSync(`${destination}table-${fileName}.txt`, fileContent);
+            let path = `${destination}/`;
+            fs.mkdirSync(path, { recursive: true });
+            fs.writeFileSync(`${path}${fileName}.txt`, fileContent);
             log(`The file has been saved!`);
             return true;
         } catch (error) {

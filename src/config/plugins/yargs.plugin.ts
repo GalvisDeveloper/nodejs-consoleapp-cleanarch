@@ -22,6 +22,18 @@ export const yarg = yargs(hideBin(process.argv))
         type: 'boolean',
         default: false,
     })
+    .option('n', {
+        alias: 'name',
+        describe: 'Name of the file to be saved',
+        type: 'string',
+        default: 'table',
+    })
+    .option('p', {
+        alias: 'path',
+        describe: 'Location where the file will be saved',
+        type: 'string',
+        default: 'outputs/',
+    })
     .check((argv) => {
         if (isNaN(argv.b)) {
             throw new Error('Error: The base must be a number');
