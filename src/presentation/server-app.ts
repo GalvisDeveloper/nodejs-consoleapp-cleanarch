@@ -8,6 +8,7 @@ export class ServerApp {
     }
 
     static run(something: MultiplicationProps) {
+        console.log('Server running')
         const table = new CreateTable().execute(something)
         if (something.show) console.log(table)
         console.log(something)
