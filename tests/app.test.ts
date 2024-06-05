@@ -1,7 +1,3 @@
-
-// process.argv = ['node', 'app', '--base', '2'];
-// import '../src/app'
-
 import { ServerApp } from "../src/presentation/server-app";
 
 describe('App', () => {
