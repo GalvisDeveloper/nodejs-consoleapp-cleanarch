@@ -18,7 +18,7 @@ export class SaveFile implements SaveFileUseCase {
          */
     }
 
-    execute({ fileContent, destination = 'outputs', fileName = 'table.txt' }: Options): boolean {
+    execute({ fileContent, destination = 'outputs', fileName = 'table' }: Options): boolean {
 
         try {
             let path = `${destination}/`;
